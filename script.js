@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function handleCellClick(event) {
     if (currentPlayer === 'Computer') {
-      return; // Prevent player move during computer's turn
+      return;
     }
 
     const clickedCell = event.target;
@@ -176,15 +176,14 @@ document.addEventListener('DOMContentLoaded', () => {
       cell.classList.remove('x', 'o');
     });
 
-    // Clear any pending computer move
     clearTimeout(computerMoveTimeout);
 
-    // Reset current player and display based on game mode
     if (gameMode === 'human') {
       currentPlayer = 'Player 1';
       display.textContent = 'Player 1\'s turn';
     } else {
-      currentPlayer = 'Player'; // Start with Player in vs computer mode
+      currentPlayer = 'Player';
+
       display.textContent = 'Player\'s turn';
     }
   }
@@ -192,9 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function toggleMode() {
     gameMode = gameMode === 'human' ? 'computer' : 'human';
     toggleButton.textContent = gameMode === 'human' ? 'Vs Computer' : 'Vs Player';
-    newGame(); // Call newGame to reset the board and current player
-  
-    // Update the display based on the game mode and current player
+    newGame();
+
     updateDisplay();
   }
 
