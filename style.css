@@ -123,16 +123,15 @@ button{
   padding: 1vh;
   border-radius: 5px;
   border: none;
-  background-color: rgb(31, 31, 31);
-  color: white;
-  font-weight: 700;
-  box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  background-color: #EFEFEF;
+  color: black;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
   transition: all 0.15s;
 }
 
 #buttons-container button:hover{
-  background-color: rgb(202, 202, 202);
-  color: rgb(0, 0, 0);
-  font-weight: 700;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8);
+  background-color: rgb(31, 31, 31);
+  color: white;
+  box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8);
 }
